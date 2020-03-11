@@ -54,7 +54,7 @@ func New(config ...Config) func(*fiber.Ctx) {
 	}, cfg.Level)
 	// Middleware function
 	return func(c *fiber.Ctx) {
-		// Skip middleware if Skip returns true
+		// Filter request to skip middleware
 		if cfg.Filter != nil && cfg.Filter(c) {
 			c.Next()
 			return
