@@ -1,3 +1,9 @@
+# Compression
+
+![Test](https://github.com/gofiber/compression/workflows/Test/badge.svg)
+![Security](https://github.com/gofiber/compression/workflows/Security/badge.svg)
+![Linter](https://github.com/gofiber/compression/workflows/Linter/badge.svg)
+
 ### Install
 ```
 go get -u github.com/gofiber/fiber
