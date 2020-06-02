@@ -32,3 +32,20 @@ func main() {
   app.Listen(3000)
 }
 ```
+### Config
+| Property | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| Filter | `func(*fiber.Ctx) bool` | Defines a function to skip middleware | `nil` |
+| Level | `int` | Level of compression | `0` (_Default GZIP compression_) |
+
+### Levels
+| Value | Description |
+| :--- | :--- |
+| `-1` | No compression |
+| `0` | Default GZIP compression |
+| `1` | Best GZIP speed |
+| `2` | Best GZIP compression |
+| `3` | GZIP HuffmanOnly |
+| `4` | Default Brotli compression |
+| `5` | Best Brotli Speed |
+| `6` | Best Brotli Compression |
