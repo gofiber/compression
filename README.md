@@ -22,8 +22,14 @@ import
 
 func main() {
   app := fiber.New()
-
+  
+  // Default compression
   app.Use(compression.New())
+
+  // Custom compression
+  app.Use(compression.New(compression.Config{
+    Level: 4, // Default Brotli compression
+  }))
 
   app.Get("/", func(c *fiber.Ctx) {
     c.Send("Welcome!")
